@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Елена Смит — репетитор английского</title>
+  <meta name="description" content="Английский для работы, путешествий и экзаменов. Пробный урок онлайн." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#top">Elena Smith</a>
+    <nav class="nav" aria-label="Меню">
+      <a href="#directions">Направления</a>
+      <a href="#about">О преподавателе</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#book">Пробный урок</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="badge">Online · Zoom / Google Meet</p>
+        <h1>Английский, который реально заговорит с вами</h1>
+        <p class="lead">Индивидуальные занятия для взрослых: работа, IELTS, разговорная практика. Без скучных учебников ради галочки.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Записаться на пробный</a>
+          <a class="btn btn-ghost" href="https://t.me/" rel="noopener">Написать в Telegram</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80" alt="Преподаватель на уроке" width="1000" height="1200" />
+      </figure>
+    </section>
+
+    <section class="directions" id="directions">
+      <div class="section-head">
+        <h2>Направления</h2>
+        <p>Выберите цель — программу соберём под вас.</p>
+      </div>
+      <div class="dir-grid">
+        <article><h3>Разговорный</h3><p>Уверенность в диалогах, акцент на лексику и произношение</p></article>
+        <article><h3>Business English</h3><p>Письма, созвоны, презентации, собеседования</p></article>
+        <article><h3>IELTS / ЕГЭ</h3><p>Стратегии заданий и регулярные mock-тесты</p></article>
+        <article><h3>С нуля</h3><p>Мягкий старт без стыда за ошибки</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-head">
+        <h2>О преподавателе</h2>
+      </div>
+      <div class="about-card">
+        <ul>
+          <li>CELTA, опыт преподавания 6 лет</li>
+          <li>C2 English, стажировка в Лондоне</li>
+          <li>200+ учеников, средняя оценка 4.9</li>
+        </ul>
+        <p>На уроках много говорения: минимум теории, максимум практики в реальных сценариях.</p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="section-head"><h2>Отзывы учеников</h2></div>
+      <div class="review-grid">
+        <blockquote><p>«За 3 месяца перестала бояться созвонов с иностранцами.»</p><cite>— Ольга, marketing</cite></blockquote>
+        <blockquote><p>«Сдали IELTS 7.0 с первого раза. Структура уроков очень чёткая.»</p><cite>— Кирилл</cite></blockquote>
+        <blockquote><p>«Наконец-то английский без скуки. Домашки короткие, но полезные.»</p><cite>— Настя</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="section-head"><h2>Стоимость занятий</h2></div>
+      <div class="price-grid">
+        <article>
+          <h3>Пробный урок</h3>
+          <p>25 минут · знакомство и план</p>
+          <p class="price">0 ₽</p>
+        </article>
+        <article class="featured">
+          <h3>Индивидуально</h3>
+          <p>55 минут · Zoom</p>
+          <p class="price">2 200 ₽</p>
+        </article>
+        <article>
+          <h3>Пакет 8 уроков</h3>
+          <p>Скидка 10%</p>
+          <p class="price">15 800 ₽</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="section-head"><h2>FAQ</h2></div>
+      <div class="faq-list">
+        <details open><summary>Нужны ли материалы?</summary><p>Всё присылаю сама: PDF, аудио, ссылки. Учебник покупать не обязательно.</p></details>
+        <details><summary>Можно ли переносить урок?</summary><p>Да, за 12 часов до начала — бесплатно.</p></details>
+        <details><summary>С какого уровня можно начать?</summary><p>С A1 до C1. На пробном определим уровень за 10 минут.</p></details>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="book-card">
+        <h2>Запись на пробный урок</h2>
+        <p>Напишите цель и удобное время — подберём слот.</p>
+        <form class="form" novalidate>
+          <label>Имя<input name="name" required placeholder="Как к вам обращаться" /></label>
+          <label>Telegram / телефон<input name="contact" required placeholder="@username или +7…" /></label>
+          <label>Цель занятий<textarea name="goal" rows="3" placeholder="Работа, IELTS, разговорный…"></textarea></label>
+          <button class="btn btn-primary" type="submit">Отправить</button>
+          <p class="form-note" hidden>Заявка отправлена — демо-форма портфолио.</p>
+        </form>
+        <div class="messengers">
+          <a href="https://t.me/">Telegram</a>
+          <a href="https://wa.me/79001234567">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Elena Smith · English tutor</span>
+    <a href="mailto:hello@example.com">hello@example.com</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
