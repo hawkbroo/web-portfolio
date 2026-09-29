@@ -8,10 +8,11 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-home">
   <p class="demo-banner" role="note">
     <strong>ДЕМО ДЛЯ ПОРТФОЛИО.</strong>
     Это не настоящий бизнес, не действующий магазин и не реальные услуги.
@@ -34,57 +35,86 @@
       <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
     </header>
 
-    <section class="hero">
-      <div>
+    <section class="home-hero" aria-label="Главный экран">
+      <img
+        class="home-hero-bg"
+        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=80"
+        alt="Уборка светлой кухни — демо-фото для портфолио"
+        width="1800"
+        height="1200"
+        fetchpriority="high"
+      />
+      <div class="home-hero-scrim" aria-hidden="true"></div>
+      <div class="home-hero-content">
         <p class="eyebrow">Демо · сервисный бизнес · Москва</p>
-        <h1>Бытовая химия и уборка с доставкой на дом</h1>
-        <p class="lead">Многостраничный учебный сайт: каталог, корзина на несколько товаров, доставка и блок оплаты-заглушка.</p>
+        <h1>Чистота дома — с доставкой наборов</h1>
+        <p class="lead">Учебный многостраничник: каталог, корзина на несколько товаров, доставка и оплата-заглушка.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="catalog.html">Смотреть каталог</a>
           <a class="btn btn-ghost" href="cart.html">Открыть корзину</a>
         </div>
-        <p class="notice">Все товары, цены и адреса вымышлены. Заявки никуда не уходят.</p>
+        <p class="home-hero-note">Фото со стока · товары и бренд вымышлены · это не коммерческое предложение</p>
       </div>
-      <aside class="hero-panel">
-        <h2>Что внутри демо</h2>
-        <ul>
-          <li>Каталог + корзина с qty</li>
-          <li>Несколько товаров в одном заказе</li>
-          <li>Форма доставки</li>
-          <li>Поля оплаты пустые и заблокированы</li>
-        </ul>
-      </aside>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <h2>Как устроен сервис</h2>
-        <p>Структура как у малого бизнеса: каталог → корзина → доставка → оплата (заглушка).</p>
+        <h2>Три шага сервиса</h2>
+        <p>Как выглядит путь клиента — только интерфейс, без реальных заказов.</p>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Каталог</h3>
-          <p>Наборы для уборки — кладите в корзину сколько угодно позиций.</p>
+      <div class="feature-row">
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1563453392212-326f255f3a86?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="700" loading="lazy" />
+          <div class="f-body">
+            <h3>1. Каталог</h3>
+            <p>10 демо-товаров — кладите сколько угодно в корзину.</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Корзина</h3>
-          <p>Количество, сумма, очистка. Данные только в вашем браузере.</p>
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="700" loading="lazy" />
+          <div class="f-body">
+            <h3>2. Корзина</h3>
+            <p>Количество, сумма, несколько позиций сразу.</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Оплата (заглушка)</h3>
-          <p>Карта не принимается. Кнопка оплаты неактивна.</p>
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="700" loading="lazy" />
+          <div class="f-body">
+            <h3>3. Доставка</h3>
+            <p>Адрес есть, оплата картой — специально отключена.</p>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <section class="mood-strip" aria-label="Атмосфера">
+      <figure class="mood-photo">
+        <img
+          src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1400&q=80"
+          alt="Светлая кухня — стоковое фото для демо"
+          width="1400"
+          height="1000"
+          loading="lazy"
+        />
+      </figure>
+      <div class="mood-copy">
+        <p class="eyebrow">Для портфолио</p>
+        <h2>Сайт «как у живого сервиса»</h2>
+        <p>Навигация, товары, корзина и оформление — чтобы показать заказчику структуру многостраничника. Никаких реальных курьеров и списаний.</p>
+        <a class="btn btn-primary" href="about.html">О проекте</a>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
         <h2>Популярное из каталога</h2>
-        <p>Всего 10 демо-товаров — полный список в <a href="catalog.html">каталоге</a>.</p>
+        <p>Фото условные. Полный список — 10 позиций в каталоге.</p>
       </div>
       <div class="product-grid">
-        <article class="product">
-          <div class="product-media" aria-hidden="true">🍳</div>
+        <article class="product has-photo">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1563453392212-326f255f3a86?auto=format&fit=crop&w=800&q=80" alt="Моющие средства — демо" width="800" height="600" loading="lazy" />
+          </div>
           <div class="product-body">
             <h3>Спрей «ЖирOFF»</h3>
             <p>Для плиты и вытяжки, 750 мл.</p>
@@ -92,8 +122,10 @@
             <button class="btn btn-primary" type="button" data-add-cart data-id="zhiroff" data-title="Спрей «ЖирOFF»" data-price="490">В корзину</button>
           </div>
         </article>
-        <article class="product">
-          <div class="product-media" aria-hidden="true">🛁</div>
+        <article class="product has-photo">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?auto=format&fit=crop&w=800&q=80" alt="Ванная — демо" width="800" height="600" loading="lazy" />
+          </div>
           <div class="product-body">
             <h3>Гель «Блеск ванной»</h3>
             <p>Антиналёт для кафеля, 500 мл.</p>
@@ -101,8 +133,10 @@
             <button class="btn btn-primary" type="button" data-add-cart data-id="bath-gel" data-title="Гель «Блеск ванной»" data-price="560">В корзину</button>
           </div>
         </article>
-        <article class="product">
-          <div class="product-media" aria-hidden="true">✨</div>
+        <article class="product has-photo">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1585421514738-67c0c6ed9f9f?auto=format&fit=crop&w=800&q=80" alt="Набор для уборки — демо" width="800" height="600" loading="lazy" />
+          </div>
           <div class="product-body">
             <h3>Бокс «Генеральная»</h3>
             <p>Большой комплект для уборки.</p>
@@ -110,6 +144,10 @@
             <button class="btn btn-primary" type="button" data-add-cart data-id="kit-general" data-title="Бокс «Генеральная»" data-price="3490">В корзину</button>
           </div>
         </article>
+      </div>
+      <div class="section-cta">
+        <p class="notice" style="margin:0">Не настоящий бизнес · фото со Unsplash · оплата отключена</p>
+        <a class="btn btn-ghost" href="catalog.html">Все 10 товаров</a>
       </div>
     </section>
 
