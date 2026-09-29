@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оформление заказа — ДомСервис (демо)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner" role="note">
+    <strong>ОПЛАТА ОТКЛЮЧЕНА.</strong>
+    Заказ собирается из корзины (несколько товаров). С карты списать нельзя — поля оплаты пустые и заблокированы.
+  </p>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo" href="index.html">Дом<span>Сервис</span></a>
+      <nav class="nav" aria-label="Меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="cart.html">Корзина</a>
+        <a class="is-active" href="order.html">Оформление</a>
+        <a href="about.html">О проекте</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="cart-link" href="cart.html">Корзина <span class="cart-badge" data-cart-count hidden>0</span></a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </header>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="section-head">
+        <h2>Оформление доставки</h2>
+        <p>Состав заказа берётся из корзины. Можно заполнить адрес — оплатить нельзя.</p>
+      </div>
+
+      <div class="order-layout">
+        <form class="form-card" id="order-form" action="#" method="post" novalidate>
+          <h2>Данные для доставки</h2>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="city">Город</label>
+            <input id="city" name="city" type="text" value="Москва" />
+          </div>
+          <div class="field">
+            <label for="address">Адрес доставки</label>
+            <input id="address" name="address" type="text" placeholder="Улица, дом, квартира" autocomplete="street-address" />
+          </div>
+          <div class="field">
+            <label for="date">Желаемая дата</label>
+            <input id="date" name="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="comment">Комментарий курьеру</label>
+            <textarea id="comment" name="comment" placeholder="Код домофона, этаж…"></textarea>
+          </div>
+
+          <div class="pay-block" aria-disabled="true">
+            <h3>Оплата картой — недоступна в демо</h3>
+            <p>Поля специально пустые и disabled, чтобы нельзя было ввести карту и оплатить случайно.</p>
+            <div class="field">
+              <label for="pay-method">Способ оплаты</label>
+              <select id="pay-method" name="pay-method" disabled>
+                <option value="">— не выбрано (демо) —</option>
+                <option>Карта онлайн</option>
+                <option>При получении</option>
+              </select>
+            </div>
+            <div class="pay-row">
+              <div class="field">
+                <label for="card-number">Номер карты</label>
+                <input id="card-number" name="card-number" type="text" value="" placeholder="Поле пустое · ввод запрещён" disabled readonly autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="card-name">Имя на карте</label>
+                <input id="card-name" name="card-name" type="text" value="" placeholder="Поле пустое · ввод запрещён" disabled readonly autocomplete="off" />
+              </div>
+            </div>
+            <div class="pay-row">
+              <div class="field">
+                <label for="card-exp">Срок</label>
+                <input id="card-exp" name="card-exp" type="text" value="" placeholder="MM / YY" disabled readonly autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="card-cvc">CVC</label>
+                <input id="card-cvc" name="card-cvc" type="password" value="" placeholder="•••" disabled readonly autocomplete="off" />
+              </div>
+            </div>
+            <button class="btn btn-primary is-disabled" type="button" data-demo-pay disabled aria-disabled="true">
+              Оплатить — недоступно
+            </button>
+          </div>
+
+          <p class="notice" style="margin-top:1rem">
+            Кнопка ниже только показывает уведомление. Заказ не создаётся, деньги не списываются, корзина не очищается.
+          </p>
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:0.6rem">
+            Отправить демо-заявку (без оплаты)
+          </button>
+        </form>
+
+        <aside class="summary-card">
+          <h2>Состав из корзины</h2>
+          <p class="notice" id="order-empty" hidden style="margin-top:0">
+            Корзина пуста. <a href="catalog.html">Добавьте товары</a>.
+          </p>
+          <ul class="summary-list" id="order-items"></ul>
+          <div class="summary-total"><span>Сумма товаров</span><span id="order-total">0 ₽</span></div>
+          <p class="muted" style="margin:0.9rem 0 0;font-size:0.9rem">
+            Доставка в демо: 0 ₽. Не настоящий бизнес.
+          </p>
+          <p style="margin:1rem 0 0"><a href="cart.html">Изменить корзину</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap" style="width:100%;padding:0">
+        <span>Демо-заказ · оплата заблокирована</span>
+        <a href="../index.html">← К портфолио</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

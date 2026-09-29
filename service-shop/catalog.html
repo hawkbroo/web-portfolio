@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог — ДомСервис (демо)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner" role="note">
+    <strong>ДЕМО.</strong> Все товары вымышлены. Кладёте в учебную корзину — купить по-настоящему нельзя.
+  </p>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo" href="index.html">Дом<span>Сервис</span></a>
+      <nav class="nav" aria-label="Меню">
+        <a href="index.html">Главная</a>
+        <a class="is-active" href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="cart.html">Корзина</a>
+        <a href="order.html">Оформление</a>
+        <a href="about.html">О проекте</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="cart-link" href="cart.html">Корзина <span class="cart-badge" data-cart-count hidden>0</span></a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </header>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="section-head">
+        <h2>Каталог (10 демо-позиций)</h2>
+        <p>Цены и названия придуманы для портфолио. Добавляйте несколько товаров в корзину.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🍳</div>
+          <div class="product-body">
+            <h3>Спрей «ЖирOFF»</h3>
+            <p>Для плиты и вытяжки, 750 мл. Вымышленный состав.</p>
+            <div class="price">490 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="zhiroff" data-title="Спрей «ЖирOFF»" data-price="490">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🛁</div>
+          <div class="product-body">
+            <h3>Гель «Блеск ванной»</h3>
+            <p>Антиналёт для кафеля и смесителей, 500 мл.</p>
+            <div class="price">560 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="bath-gel" data-title="Гель «Блеск ванной»" data-price="560">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🪟</div>
+          <div class="product-body">
+            <h3>Спрей «Стекло+»</h3>
+            <p>Для окон и зеркал без разводов, 500 мл.</p>
+            <div class="price">390 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="glass" data-title="Спрей «Стекло+»" data-price="390">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🪵</div>
+          <div class="product-body">
+            <h3>Концентрат «Полы Pro»</h3>
+            <p>На 20 вёдер воды, аромат «свежая хвоя» (демо).</p>
+            <div class="price">720 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="floors-pro" data-title="Концентрат «Полы Pro»" data-price="720">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🧤</div>
+          <div class="product-body">
+            <h3>Перчатки «Мягкий хват»</h3>
+            <p>Пара, размер M. Только для вида карточки.</p>
+            <div class="price">180 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="gloves" data-title="Перчатки «Мягкий хват»" data-price="180">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🧽</div>
+          <div class="product-body">
+            <h3>Набор губок «Топ-6»</h3>
+            <p>Шесть губок разной жёсткости. Учебный SKU.</p>
+            <div class="price">250 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="sponges" data-title="Набор губок «Топ-6»" data-price="250">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🧺</div>
+          <div class="product-body">
+            <h3>Мешки «Чистый вынос» 60 л</h3>
+            <p>Рулон 20 шт., с завязками. Не продаётся.</p>
+            <div class="price">310 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="bags" data-title="Мешки «Чистый вынос» 60 л" data-price="310">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🌱</div>
+          <div class="product-body">
+            <h3>Эко-спрей «Луговой»</h3>
+            <p>Мягкая формула без резкого запаха (вымысел).</p>
+            <div class="price">640 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="eco-spray" data-title="Эко-спрей «Луговой»" data-price="640">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🧴</div>
+          <div class="product-body">
+            <h3>Набор «Кухня за час»</h3>
+            <p>ЖирOFF + губки + салфетки. Комплект для демо.</p>
+            <div class="price">1 190 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="kit-kitchen" data-title="Набор «Кухня за час»" data-price="1190">В корзину</button>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">✨</div>
+          <div class="product-body">
+            <h3>Бокс «Генеральная»</h3>
+            <p>10 позиций для большой уборки. Полностью вымышленный.</p>
+            <div class="price">3 490 ₽</div>
+            <button class="btn btn-primary" type="button" data-add-cart data-id="kit-general" data-title="Бокс «Генеральная»" data-price="3490">В корзину</button>
+          </div>
+        </article>
+      </div>
+      <p class="notice">Не настоящий бизнес. Нет склада, курьеров и приёма денег.</p>
+      <p style="margin-top:1rem"><a class="btn btn-ghost" href="cart.html">Перейти в корзину</a></p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap" style="width:100%;padding:0">
+        <span>Демо-каталог · 10 товаров · оплата отключена</span>
+        <a href="../index.html">← К портфолио</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
