@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Заказ с доставкой — ДомСервис (демо)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner" role="note">
+    <strong>ОПЛАТА ОТКЛЮЧЕНА.</strong>
+    Это учебный макет. Заказ никуда не отправляется, с карты списать нельзя — поля оплаты пустые и заблокированы.
+  </p>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo" href="index.html">Дом<span>Сервис</span></a>
+      <nav class="nav" aria-label="Меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a class="is-active" href="order.html">Заказ</a>
+        <a href="about.html">О проекте</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-cta" href="catalog.html">К каталогу</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </header>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="section-head">
+        <h2>Оформление заказа с доставкой</h2>
+        <p>Демо-форма: можно заполнить адрес, но оплатить и реально заказать нельзя.</p>
+      </div>
+
+      <div class="order-layout">
+        <form class="form-card" id="order-form" action="#" method="post" novalidate>
+          <h2>Данные для доставки</h2>
+
+          <div class="field">
+            <label for="product">Товар / набор</label>
+            <input id="product" name="product" type="text" value="Набор «Кухня»" />
+          </div>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="city">Город</label>
+            <input id="city" name="city" type="text" value="Москва" />
+          </div>
+          <div class="field">
+            <label for="address">Адрес доставки</label>
+            <input id="address" name="address" type="text" placeholder="Улица, дом, квартира" autocomplete="street-address" />
+          </div>
+          <div class="field">
+            <label for="date">Желаемая дата</label>
+            <input id="date" name="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="comment">Комментарий курьеру</label>
+            <textarea id="comment" name="comment" placeholder="Код домофона, этаж…"></textarea>
+          </div>
+
+          <div class="pay-block" aria-disabled="true">
+            <h3>Оплата картой — недоступна в демо</h3>
+            <p>Поля специально пустые и disabled, чтобы нельзя было ввести карту и оплатить случайно. Платёжный шлюз не подключён.</p>
+
+            <div class="field">
+              <label for="pay-method">Способ оплаты</label>
+              <select id="pay-method" name="pay-method" disabled>
+                <option value="">— не выбрано (демо) —</option>
+                <option>Карта онлайн</option>
+                <option>При получении</option>
+              </select>
+            </div>
+            <div class="pay-row">
+              <div class="field">
+                <label for="card-number">Номер карты</label>
+                <input id="card-number" name="card-number" type="text" value="" placeholder="Поле пустое · ввод запрещён" disabled readonly autocomplete="off" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="card-name">Имя на карте</label>
+                <input id="card-name" name="card-name" type="text" value="" placeholder="Поле пустое · ввод запрещён" disabled readonly autocomplete="off" />
+              </div>
+            </div>
+            <div class="pay-row">
+              <div class="field">
+                <label for="card-exp">Срок</label>
+                <input id="card-exp" name="card-exp" type="text" value="" placeholder="MM / YY" disabled readonly autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="card-cvc">CVC</label>
+                <input id="card-cvc" name="card-cvc" type="password" value="" placeholder="•••" disabled readonly autocomplete="off" />
+              </div>
+            </div>
+            <button class="btn btn-primary is-disabled" type="button" data-demo-pay disabled aria-disabled="true">
+              Оплатить — недоступно
+            </button>
+          </div>
+
+          <p class="notice" style="margin-top:1rem">
+            Кнопка ниже только показывает уведомление. Заказ не создаётся, деньги не списываются.
+          </p>
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:0.6rem">
+            Отправить демо-заявку (без оплаты)
+          </button>
+        </form>
+
+        <aside class="summary-card">
+          <h2>Итого (демо)</h2>
+          <ul class="summary-list">
+            <li><span>Товар</span><span>по каталогу</span></li>
+            <li><span>Доставка</span><span>0 ₽ · учебный режим</span></li>
+            <li><span>Оплата</span><span>отключена</span></li>
+          </ul>
+          <div class="summary-total"><span>К оплате сейчас</span><span>0 ₽</span></div>
+          <p class="muted" style="margin:0.9rem 0 0;font-size:0.9rem">
+            Не настоящий бизнес. Нет курьеров, склада и эквайринга.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap" style="width:100%;padding:0">
+        <span>Демо-заказ · оплата заблокирована</span>
+        <a href="../index.html">← К портфолио</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="demo-toast" role="status">
+    Демо: заявка не отправлена. Это учебный сайт, оплаты нет.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

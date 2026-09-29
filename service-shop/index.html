@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ДомСервис — демо многостраничный сайт</title>
+  <meta name="description" content="Демо-концепт сервисного бизнеса с каталогом и заказом доставки. Не настоящий магазин." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner" role="note">
+    <strong>ДЕМО ДЛЯ ПОРТФОЛИО.</strong>
+    Это не настоящий бизнес, не действующий магазин и не реальные услуги.
+    Оплата и доставка отключены — случайно оплатить нельзя.
+  </p>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo" href="index.html">Дом<span>Сервис</span></a>
+      <nav class="nav" aria-label="Меню">
+        <a class="is-active" href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="order.html">Заказ</a>
+        <a href="about.html">О проекте</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-cta" href="order.html">Оформить заказ</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Демо · сервисный бизнес · Москва</p>
+        <h1>Бытовая химия и уборка с доставкой на дом</h1>
+        <p class="lead">Многостраничный учебный сайт: каталог, доставка, оформление заказа и блок оплаты-заглушка.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="catalog.html">Смотреть каталог</a>
+          <a class="btn btn-ghost" href="order.html">Демо-заказ</a>
+        </div>
+        <p class="notice">Все товары, цены и адреса вымышлены. Заявки никуда не уходят.</p>
+      </div>
+      <aside class="hero-panel">
+        <h2>Что внутри демо</h2>
+        <ul>
+          <li>6 страниц с общей навигацией</li>
+          <li>Каталог с переходом в заказ</li>
+          <li>Форма доставки</li>
+          <li>Поля оплаты пустые и заблокированы</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Как устроен сервис</h2>
+        <p>Структура как у малого бизнеса: услуги, товары, доставка, заказ.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Каталог</h3>
+          <p>Наборы для уборки кухни, ванной и генеральной уборки.</p>
+        </article>
+        <article class="card">
+          <h3>Доставка</h3>
+          <p>Вымышленные зоны и сроки — только для демонстрации UI.</p>
+        </article>
+        <article class="card">
+          <h3>Оплата (заглушка)</h3>
+          <p>Карта не принимается. Кнопка оплаты неактивна.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Популярное в демо-каталоге</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🧴</div>
+          <div class="product-body">
+            <h3>Набор «Кухня»</h3>
+            <p>Обезжириватель, спрей для стекол, губки.</p>
+            <div class="price">1 890 ₽</div>
+            <a class="btn btn-primary" href="order.html?product=Набор%20Кухня">В заказ</a>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">🛁</div>
+          <div class="product-body">
+            <h3>Набор «Ванная»</h3>
+            <p>Антиналёт, гель для плитки, перчатки.</p>
+            <div class="price">2 150 ₽</div>
+            <a class="btn btn-primary" href="order.html?product=Набор%20Ванная">В заказ</a>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product-media" aria-hidden="true">✨</div>
+          <div class="product-body">
+            <h3>Генеральная уборка</h3>
+            <p>Расширенный комплект + мешки для мусора.</p>
+            <div class="price">3 490 ₽</div>
+            <a class="btn btn-primary" href="order.html?product=Генеральная%20уборка">В заказ</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap" style="width:100%;padding:0">
+        <span>© Демо «ДомСервис» · портфолио · не коммерческий проект</span>
+        <a href="../index.html">← К списку кейсов</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

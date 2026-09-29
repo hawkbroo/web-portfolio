@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>О проекте — ДомСервис (демо)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner" role="note">
+    <strong>ДЕМО-КОНЦЕПТ.</strong> Не компания, не оферта, не реклама реальных услуг.
+  </p>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo" href="index.html">Дом<span>Сервис</span></a>
+      <nav class="nav" aria-label="Меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="order.html">Заказ</a>
+        <a class="is-active" href="about.html">О проекте</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-cta" href="order.html">Оформить заказ</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </header>
+
+    <section class="section" style="padding-top:1rem;max-width:62ch">
+      <div class="section-head">
+        <h2>Зачем этот сайт</h2>
+        <p>Учебный многостраничник для портфолио и откликов на фрилансе.</p>
+      </div>
+      <div class="card">
+        <p>Бренд «ДомСервис», товары, отзывы и контакты — вымысел. Сайт показывает структуру сервисного бизнеса: главная, каталог, доставка, заказ с доставкой, страница «о проекте», контакты.</p>
+        <p>На странице заказа есть блок оплаты: поля карты <strong>пусты</strong>, стоят <code>disabled</code> / <code>readonly</code>, кнопка «Оплатить» неактивна. Случайно оплатить невозможно — эквайринг не подключён.</p>
+        <p style="margin-bottom:0">Стек: HTML, CSS, немного JS. Без CMS и конструкторов.</p>
+      </div>
+      <p class="notice">Если вы попали сюда из поиска — это не магазин. Купить здесь ничего нельзя.</p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap" style="width:100%;padding:0">
+        <span>Портфолио · демо</span>
+        <a href="../index.html">← К списку кейсов</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
