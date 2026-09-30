@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запись — Atelier Claire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-banner" role="note">
+    Демо-запись. Сообщение откроется в Telegram @spel21 (аккаунт автора портфолио), не салона.
+  </div>
+
+  <header class="header">
+    <a class="logo" href="index.html">Atelier <span>Claire</span></a>
+    <nav class="nav" aria-label="Меню">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Услуги</a>
+      <a href="reviews.html">Отзывы</a>
+      <a class="nav-cta" href="book.html" aria-current="page">Записаться</a>
+    </nav>
+  </header>
+
+  <main class="wrap page book-page">
+    <p class="eyebrow">Онлайн-запись</p>
+    <h1>Запись в Telegram</h1>
+    <p class="section-lead">
+      Как на реальном заказе: короткая форма → готовый текст в мессенджер администратору.
+      Сейчас для демо чат ведёт на <strong>@spel21</strong>.
+    </p>
+
+    <form class="form form-narrow" id="book-form">
+      <label>Имя
+        <input type="text" name="name" required placeholder="Ваше имя" />
+      </label>
+      <label>Услуга
+        <select name="service" id="service-field" required>
+          <option value="" disabled selected>Выберите услугу</option>
+          <option value="Стрижка женская">Стрижка женская</option>
+          <option value="Окрашивание">Окрашивание / тонирование</option>
+          <option value="Маникюр">Маникюр + покрытие</option>
+          <option value="Уход за волосами">Уход за волосами</option>
+          <option value="Консультация">Консультация / другое</option>
+        </select>
+      </label>
+      <label>Мастер
+        <select name="master" id="master-field" required>
+          <option value="" disabled selected>Выберите мастера</option>
+          <option value="Анна · колорист">Анна · колорист</option>
+          <option value="Мария · стрижки">Мария · стрижки</option>
+          <option value="Ольга · маникюр">Ольга · маникюр</option>
+          <option value="Дарья · уход">Дарья · уход</option>
+          <option value="Любой свободный">Любой свободный</option>
+        </select>
+      </label>
+      <label>Удобный день
+        <select name="day" id="day-field" required>
+          <option value="" disabled selected>Выберите день</option>
+          <option value="Вторник">Вторник</option>
+          <option value="Среда">Среда</option>
+          <option value="Четверг">Четверг</option>
+          <option value="Пятница">Пятница</option>
+          <option value="Суббота">Суббота</option>
+          <option value="Воскресенье">Воскресенье</option>
+        </select>
+      </label>
+      <label>Удобное время
+        <select name="time" id="time-field" required>
+          <option value="" disabled selected>Выберите время</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+        </select>
+      </label>
+      <label>Комментарий
+        <textarea name="comment" rows="3" placeholder="Пожелания к длине, цвету…"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Открыть Telegram</button>
+      <p class="hint">Или напишите сразу: <a href="https://t.me/spel21" target="_blank" rel="noopener">t.me/spel21</a></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-note">Демо Atelier Claire</p>
+      <a href="index.html">На главную</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

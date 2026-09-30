@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Отзывы — Atelier Claire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-banner" role="note">
+    Демо-модуль отзывов «как на заказе»: отправка → модерация → публикация. Локально письмо имитируется ссылкой; в бою — Google + почта заказчика.
+  </div>
+
+  <header class="header">
+    <a class="logo" href="index.html">Atelier <span>Claire</span></a>
+    <nav class="nav" aria-label="Меню">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Услуги</a>
+      <a href="reviews.html" aria-current="page">Отзывы</a>
+      <a class="nav-cta" href="book.html">Записаться</a>
+    </nav>
+  </header>
+
+  <main class="wrap page">
+    <div class="reviews-head">
+      <div>
+        <p class="eyebrow">Доверие</p>
+        <h1>Отзывы гостей</h1>
+        <p class="rating-summary" id="rating-summary">Средняя оценка: —</p>
+      </div>
+      <a class="btn btn-primary" href="#leave">Оставить отзыв</a>
+    </div>
+
+    <div class="reviews-list" id="reviews-list">
+      <p class="section-lead">Загрузка отзывов…</p>
+    </div>
+
+    <section class="leave" id="leave">
+      <h2>Оставить отзыв</h2>
+      <p class="section-lead">
+        Для гостя — одна кнопка «Отправить». Владельцу уходит письмо с текстом и кнопкой
+        <strong>Подтвердить</strong>. После подтверждения отзыв появляется в списке выше.
+      </p>
+      <form class="form" id="review-form">
+        <label>Имя
+          <input type="text" name="name" required maxlength="40" placeholder="Как подписать отзыв" />
+        </label>
+        <fieldset class="stars-pick">
+          <legend>Оценка</legend>
+          <div class="star-inputs" role="radiogroup" aria-label="Оценка от 1 до 5">
+            <label><input type="radio" name="rating" value="5" checked /> 5★</label>
+            <label><input type="radio" name="rating" value="4" /> 4★</label>
+            <label><input type="radio" name="rating" value="3" /> 3★</label>
+            <label><input type="radio" name="rating" value="2" /> 2★</label>
+            <label><input type="radio" name="rating" value="1" /> 1★</label>
+          </div>
+        </fieldset>
+        <label>Текст отзыва
+          <textarea name="text" rows="4" required maxlength="500" placeholder="Что понравилось / что улучшить"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Отправить</button>
+        <p class="form-note" id="review-status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-note">Демо Atelier Claire · не действующий бизнес</p>
+      <a href="index.html">На главную</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

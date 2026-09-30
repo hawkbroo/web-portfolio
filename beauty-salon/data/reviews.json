@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": "14be0f92",
+      "name": "рита",
+      "rating": 5,
+      "text": "все классно",
+      "status": "approved",
+      "token": "369b92c7fbec43cbb0b1e81c7e49a91d",
+      "created": "2026-09-30T10:37:58.188915+00:00"
+    },
+    {
+      "id": "d81c8dc5",
+      "name": "рита",
+      "rating": 5,
+      "text": "супер",
+      "status": "approved",
+      "token": "9f9f898944234cab8fede0094cd3f828",
+      "created": "2026-09-30T10:33:04.032868+00:00"
+    },
+    {
+      "id": "demo001",
+      "name": "Мария",
+      "rating": 5,
+      "text": "Стрижка села идеально, мастер всё объяснила.",
+      "status": "approved",
+      "token": "demo"
+    },
+    {
+      "id": "demo002",
+      "name": "Елена",
+      "rating": 5,
+      "text": "Тонирование мягкое, без желтизны.",
+      "status": "approved",
+      "token": "demo2"
+    },
+    {
+      "id": "demo003",
+      "name": "Анна",
+      "rating": 4,
+      "text": "Маникюр аккуратный.",
+      "status": "approved",
+      "token": "demo3"
+    }
+  ]
+}
